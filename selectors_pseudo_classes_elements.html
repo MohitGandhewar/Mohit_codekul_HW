@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic selectors - class ,id,attribute,element */
+        #main-heading{
+            text-align: center;
+            color:crimson;
+        }
+        .content-heading{
+            text-align: center;
+            color:rgb(113, 219, 51);
+        }
+        h2#sub-heading{
+            color:darkorange;
+        }
+        [id ^="main"]{
+            border:1px solid black;
+        }
+        [id $="ing"]{
+            border:4px dashed yellowgreen;
+        }
+        [id ~="heading"]{
+            border:4px dashed green;
+        }
+
+        a:link{
+            color:red;
+        }
+        a:visited{
+            color:yellowgreen;
+        }
+        a:hover{
+            color:teal;
+        }
+
+        a:active{
+            color:brown;
+        }
+
+        section{
+            background: whitesmoke;
+        }
+
+        i,p{
+            font-size: 20px;
+            color:#333;
+        }
+
+        .article-content > article > h2{
+            background-color:burlywood;
+        }
+
+        .article-content >article> h2 + i{
+            font-weight: bold;
+        }
+
+        .article-content >article> h2 ~ i{
+            font-weight: bold;
+        }
+
+        /*Pseudo classes -  :first-child ,:last-child,:only-child,:first-of-type
+        :last-of-type,nth-last-child,nth-child, */
+        /* Pseudo elements - ::before ,::after,::first-letter,
+        ::first-line,::selection */
+
+        /* article span:first-child{
+            border: 2px solid black;
+            border-radius: 5px;
+        } */
+
+        article p:first-of-type{
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        article ul li:last-child{
+            border: 2px solid blueviolet;
+            border-radius: 5px;
+        }
+
+        /* h3 span:only-child{
+           background-color: blueviolet;
+        } */
+
+        article ul li:last-of-type{
+            background-color: red;
+        }
+
+        article:nth-child(2){
+            background-color:olive;
+        }
+
+        article ul li:nth-last-child(3){
+            background-color:palegreen;
+        }
+        
+        /* Pseudo-elements */
+       article p::first-letter{
+           font-size: 40px;
+       }
+
+       article p::first-line{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+       }
+
+       .article-content article:nth-child(2) p::selection{
+           background-color: black;
+           color:white;
+       }
+       article ul li{
+        list-style: none;
+       }
+
+        article ul li::before{
+            content:url("bullet.PNG");
+            
+        }
+
+        article ul li::after{
+            content :"=>"
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-heading">My Blog</h1>
+     </header>
+ 
+     <main class="container">
+         <h1 class="content-heading">Blog Articles</h1>
+         <h2 id="sub-heading">Article</h2>
+         <h3 id="main-sub"><span>Subject</span></h3>
+         <section class="article-content">
+            <article>
+                <h2>How to use article tag</h2>
+                 <h2>How to use article tag</h2>
+            </article>
+             <article>
+                 <h2>How to use article tag</h2>
+                 <h2>How to use article tag</h2>
+                 
+                 <i>Wednesday,17th Feb 2021</i>
+                
+                 <p>
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam impedit nam labore hic sed non, assumenda facere accusantium doloremque aliquam eum. Veniam eaque maiores laudantium quisquam corrupti temporibus quibusdam praesentium?
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facilis aspernatur libero! Porro odit commodi, placeat deleniti facilis laudantium ipsa, consequuntur libero sequi minus recusandae quod quaerat omnis, dolor 
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, expedita ullam! Ad, molestiae corporis? Soluta minus excepturi dolore, sapiente, repellat necessitatibus assumenda odio, aspernatur ratione itaque reiciendis debitis enim pariatur!
+                 </p>
+                 <p>
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam impedit nam labore hic sed non, assumenda facere accusantium doloremque aliquam eum. Veniam eaque maiores laudantium quisquam corrupti temporibus quibusdam praesentium?
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facilis aspernatur libero! Porro odit commodi, placeat deleniti facilis laudantium ipsa, consequuntur libero sequi minus recusandae quod quaerat omnis, dolor 
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, expedita ullam! Ad, molestiae corporis? Soluta minus excepturi dolore, sapiente, repellat necessitatibus assumenda odio, aspernatur ratione itaque reiciendis debitis enim pariatur!
+                 </p>
+                 <i>Wednesday</i>
+                 <p>
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam impedit nam labore hic sed non, assumenda facere accusantium doloremque aliquam eum. Veniam eaque maiores laudantium quisquam corrupti temporibus quibusdam praesentium?
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facilis aspernatur libero! Porro odit commodi, placeat deleniti facilis laudantium ipsa, consequuntur libero sequi minus recusandae quod quaerat omnis, dolor 
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, expedita ullam! Ad, molestiae corporis? Soluta minus excepturi dolore, sapiente, repellat necessitatibus assumenda odio, aspernatur ratione itaque reiciendis debitis enim pariatur!
+                 </p>
+                 <p>
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam impedit nam labore hic sed non, assumenda facere accusantium doloremque aliquam eum. Veniam eaque maiores laudantium quisquam corrupti temporibus quibusdam praesentium?
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facilis aspernatur libero! Porro odit commodi, placeat deleniti facilis laudantium ipsa, consequuntur libero sequi minus recusandae quod quaerat omnis, dolor 
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, expedita ullam! Ad, molestiae corporis? Soluta minus excepturi dolore, sapiente, repellat necessitatibus assumenda odio, aspernatur ratione itaque reiciendis debitis enim pariatur!
+                 </p>
+             </article>
+         </section>
+         <section class="aside-content">
+             <article>
+                <span>Hello Lorem ipsum dolor sit amet.
+                    Hello Lorem ipsum dolor sit amet.
+                    Hello Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto temporibus similique molestiae dolores iure voluptatum nulla dignissimos asperiores corporis quaerat at ipsam animi culpa quis minima, commodi vel omnis.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi explicabo mollitia ab quas cumque, libero quam enim, nulla recusandae ipsam totam suscipit, impedit minima repudiandae aut eaque quia nesciunt vel?
+                </span>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque animi libero porro, nesciunt delectus quae atque tempora inventore, cupiditate deserunt ducimus esse. Vitae libero minus nemo, dolor eius vel sint.</p>
+                 <h2>Related Articles</h2>
+                 <ul>
+                    <li><a href="page.html" target="_blank">How to use aside tag</a></li>
+                     <li>How to use target attribute</li>
+                     <li>How to use aside tag</li>
+                     <li>How to use target attribute</li>
+                     <li>How to use aside tag</li>
+                     <li>How to use target attribute</li>
+                 </ul>
+             </article>
+        </section>
+</body>
+</html>
