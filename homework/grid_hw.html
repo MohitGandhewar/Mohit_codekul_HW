@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <title>Grid Homework</title>
+    <style>
+        #mainframe{
+            border: 2px solid black;
+            font-family: 'Nunito', sans-serif ;
+            font-size: 12px;
+            height: 370px;
+            width: 960px;
+            display: flex;
+            /* align-items: center; */
+            margin: 20px 20px 30px;
+        
+
+        }
+        #container{
+            /* background-color: rgb(3, 31, 123); */
+            background-color: rgb(0, 38, 102);
+            display: grid;
+            grid-column-gap:0;
+            grid-template-columns: 230px 731px;
+        }
+        .contact{
+            margin-top: 15px;
+            margin-left: 50px;
+            padding: 10px 20px 10px;
+            margin-bottom: 15px;
+            color: seashell;
+            height: 320px;
+            background-color: rgb(69, 101, 154);
+            /* border: 2px solid red; */
+        }
+        .contact p{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: flex end; */
+        }
+        #end{
+            align-items:flex-end;
+            margin-bottom: 5;
+        }
+        #bluebg{
+            display:flex;
+            padding-top: 10px;
+            width: 12000px;
+            height: 360px;
+            align-items: center;
+        }
+        .form{
+            margin-top: 15px;
+            margin-right:50px;
+            padding:15px ;
+            margin-bottom: 15px;
+            background-color: rgb(242,242,242);
+           
+           
+        }
+        .first_row{
+            display: grid;
+            column-gap: 15px;
+            grid-template-columns: 250px 250px;
+
+        }
+        /* .form textarea{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        } */
+        .form div input{
+            grid-column-start: 1;
+            
+        }
+        #message{
+            display:grid;
+            grid-template-rows: 500px;
+        }
+        #send_button input{
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 520px;
+            color: white;
+            background-color: rgb(0, 82, 218);
+        }
+        input{
+            border: 1px solid rgb(221,219,218) ;
+            /* border-color: rgb(221,219,218); */
+            border-radius: 2px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="mainframe">
+        <div id="bluebg">
+            <div id="container">
+                <div class="contact">
+                    <h3>Contact us</h3>
+                    <p>we can't wait to hear from you. Feel free to get in touch with us.</p>
+                    <p id="end">Happy ST <br> 000-111-222 </p>
+                </div>
+                <div class="form">
+                    <section id="first_row">
+                    <label for="Full Name">Full Name <br><input type="text"></label>
+                    <label for="Email address">Email address <br> <input type="text"></label>
+                    </section>
+                    <label for="Message">Message <input id="message" name="Message" id="area" cols="70" rows="5"></label>
+                    <div id="send_button">
+                        <input type="button" value="Send message" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
