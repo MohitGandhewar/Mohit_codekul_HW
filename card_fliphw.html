@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+
+        }
+        .container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border: 2px solid black;
+        }
+
+        .card {
+            height: 340px;
+            width: 340px;
+            border: 2px dashed red;
+            transform-style:preserve-3d;
+            transition: transform 2s;
+        }
+        .card:hover{
+            transform: perspective(600px) rotateY(180deg);
+        }
+
+        #front {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: turquoise;
+            color: black;
+        }
+        #front h2{
+            font-size: 30px;
+            padding:20px 50px ;
+        }
+        
+        #back {
+            height: 100%;
+            width:100%;
+            background-color: rgb(151, 151, 151);
+            color: black;
+            transform: rotateY(180deg);
+        }
+        #back h3{
+            padding: 15px 25px;
+            font-size: 30px;
+            color: darkslateblue;
+        }
+        #back ul li{
+            color: cornsilk;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div id="front">
+                <h2>Mohit Ajayrao Gandhewar</h2>
+                <p>
+                    I am a mechanical engineer who has a very curious mind about the
+                    technologies and how they woks and do wonder
+                </p>
+            </div>
+            <div id="back">
+                <h3>skills</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>BootStrap</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
