@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Average Marks</title>
+</head>
+<body>
+    <script>
+            var English=75
+            var Physic= 80
+            var Chemistry = 47
+
+            var total=English+Physic+Chemistry
+
+            console.log("Total marks of 3 Subject is: "+total)
+    
+            var avg=total/3
+            console.log("Average Marks is: "+avg)
+    
+            if(English >=35 && Physic >=35 && Chemistry >=35){
+                
+                if(avg >= 91 && avg <= 100 )
+                {
+                    console.log("A+ Grade")
+                }
+                else if(avg >= 81 && avg <= 90)
+                {
+                    console.log("A Grade")
+                }
+                else if(avg >= 71 && avg <= 80)
+                {
+                    console.log("B+ Grade")
+                }
+                else if(avg >= 61 && avg <= 70)
+                {
+                    console.log("B Grade")
+                }
+                else if(avg >= 51 && avg <= 60)
+                {
+                    console.log("C+ Grade")
+                }
+                else if(avg >= 41 && avg <= 50)
+                {
+                    console.log("c Grade")
+                }
+                else
+                {
+                    console.log("D Grade")
+                }
+            }
+            else{
+                console.log("Fail")
+            }
+    </script>
+</body>
+</html>
